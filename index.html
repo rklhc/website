@@ -465,22 +465,32 @@
           </div>
 
           <div class="col-lg-6">
-            <a href="javascript:void(0);" class="btn btn-primary" id="mpopupLink">Payment to RKLHC</a>
+            <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
 
-            <!-- Link to trigger modal -->
-            <div id="mpopupBox" class="mpopup">
-              <!-- Modal content -->
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <span class="close">×</span>
-                      <h2>Payment to RKLHC</h2>
-                  </div>
-                  <div class="modal-body">
-                      <img src="assets/img/payment.jpeg" width="360px" height="600px">
-                  </div>
-              </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="assets/img/payment.jpeg">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
             </div>
-
           </div>
 
         </div>
@@ -555,34 +565,6 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script>
-      // Select modal
-      var mpopup = document.getElementById('mpopupBox');
-    
-    // Select trigger link
-    var mpLink = document.getElementById("mpopupLink");
-    
-    // Select close action element
-    var close = document.getElementsByClassName("close")[0];
-    
-    // Open modal once the link is clicked
-    mpLink.onclick = function() {
-        mpopup.style.display = "block";
-    };
-    
-    // Close modal once close element is clicked
-    close.onclick = function() {
-        mpopup.style.display = "none";
-    };
-    
-    // Close modal when user clicks outside of the modal box
-    window.onclick = function(event) {
-        if (event.target == mpopup) {
-            mpopup.style.display = "none";
-        }
-    };
-
-  </script>
   
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
